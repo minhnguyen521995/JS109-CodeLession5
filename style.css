@@ -1,0 +1,27 @@
+
+
+.square {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+#div1 {
+  background-color: red;
+  
+}
+
+#div2 {
+  background-color: green;
+}
+
+#div3 {
+  background-color: blue;
+}
+
+.special {
+  margin-left: 200px;
+}
+
+.redText {
+  color: red;
+}
