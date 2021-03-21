@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width and height of the window</title>
+</head>
+
+<body onresize="getSize()">
+    <p>The width and height of the window is</p>
+    <p id="output"></p>
+    <script>
+        function getSize() {
+            let w = window.outerWidth;
+            let h = window.outerHeight;
+            document.getElementById("output").innerHTML = "Width= " + w +". Height= " + h;     
+        }
+    </script>
+</body>
+
+</html>

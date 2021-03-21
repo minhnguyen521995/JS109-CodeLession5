@@ -1,0 +1,31 @@
+<!--câu 6_2-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Add items to a dropdown list</title>
+</head>
+
+<body>
+    <form>
+        <select id="colorSelect">
+            <option>Red</option>
+            <option>Green</option>
+            <option>White</option>
+            <option>Black</option>
+        </select>
+        <input type="text" id="textField">
+        <input type="button" onclick="addcolor()" value="Add">
+    </form>
+    <script>
+        function addcolor() {
+            let i = document.getElementById("colorSelect");
+            let u = document.createElement("option");
+            u.text = document.getElementById("textField").value;
+            i.add(u);
+        }
+    </script>
+</body>
+
+</html>
