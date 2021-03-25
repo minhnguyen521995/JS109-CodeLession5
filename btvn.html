@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div id="result"></div>
+    <div id="age"></div>
+    <div id="address"></div>
+
+    <script>
+        //Store & Retrieve data type string
+        localStorage.setItem("lastname", "Minh");
+        document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+
+        //Store & Retrieve data type array
+        let myArray = [26, 27, 28, 29];
+        localStorage.setItem("myArray", JSON.stringify(myArray));
+        let getArray = JSON.parse(localStorage.getItem("myArray"));
+        document.getElementById("age").innerHTML = getArray[0];
+
+        //Store & Retrieve data type object
+        let myInfo = {
+            name: "Minh",
+            age: 26,
+            address: "Ha Noi"
+        }
+        localStorage.setItem("myInfo",JSON.stringify(myInfo));
+        let getObject = JSON.parse(localStorage.getItem("myInfo"));
+        document.getElementById("address").innerHTML = getObject.address;
+    </script>
+
+</body>
+
+</html>
