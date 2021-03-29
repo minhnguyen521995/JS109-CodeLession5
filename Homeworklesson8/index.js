@@ -31,24 +31,28 @@ let myIcon = [
 
 
 let getData = async (city) => {
-    let preData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=1760b16891e31cb347b152d1493325cd`);
-    let data = await preData.json();
-    cityName.textContent = data.name;
-    description.textContent = data.weather[0].description;
-    let kTemp = data.main.temp;
-    temp.textContent = Math.floor(kTemp - 273.15) + "\xB0C";
-    if (kTemp < 293.15) {
-        comment.textContent = 'Hom nay troi ret';
-    } else if (kTemp < 303.15) {
-        comment.textContent = 'Hom nay troi mat me';
-    } else {
-        comment.textContent = 'Hom nay troi nong';
-    }
-    let iconId = data.weather[0].icon;
-    let icon = document.querySelector('img');
-    for (i = 0; i < myIcon.length; i++) {
-        if (myIcon[i].id == iconId) {
-            icon.src = myIcon[i].src;
+    try {
+        let preData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=1760b16891e31cb347b152d1493325cd`);
+        let data = await preData.json();
+        cityName.textContent = data.name;
+        description.textContent = data.weather[0].description;
+        let kTemp = data.main.temp;
+        temp.textContent = Math.floor(kTemp - 273.15) + "\xB0C";
+        if (kTemp < 293.15) {
+            comment.textContent = 'Hom nay troi ret';
+        } else if (kTemp < 303.15) {
+            comment.textContent = 'Hom nay troi mat me';
+        } else {
+            comment.textContent = 'Hom nay troi nong';
         }
+        let iconId = data.weather[0].icon;
+        let icon = document.querySelector('img');
+        for (i = 0; i < myIcon.length; i++) {
+            if (myIcon[i].id == iconId) {
+                icon.src = myIcon[i].src;
+            }
+        }
+    } catch (err) {
+        alert('Không tìm thấy thành phố. Vui lòng nhập lại');
     }
 }
