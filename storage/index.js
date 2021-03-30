@@ -9,6 +9,7 @@ let cityName = document.querySelector('#city');
 let description = document.querySelector('#description');
 let temp = document.querySelector('#temp');
 let comment = document.querySelector('#comment');
+let icon = document.querySelector('img');
 let myIcon = [
     { id: '10d', src: 'http://openweathermap.org/img/wn/10d@2x.png' },
     { id: '02d', src: 'http://openweathermap.org/img/wn/02d@2x.png' },
@@ -32,21 +33,20 @@ let myIcon = [
 
 let getData = async (city) => {
     try {
-        let preData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=1760b16891e31cb347b152d1493325cd`);
+        let preData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=1760b16891e31cb347b152d1493325cd`);
         let data = await preData.json();
         cityName.textContent = data.name;
         description.textContent = data.weather[0].description;
-        let kTemp = data.main.temp;
-        temp.textContent = Math.floor(kTemp - 273.15) + "\xB0C";
-        if (kTemp < 293.15) {
+        let cTemp = data.main.temp;
+        temp.textContent = cTemp + "\xB0C";
+        if (cTemp < 20) {
             comment.textContent = 'Hom nay troi ret';
-        } else if (kTemp < 303.15) {
+        } else if (cTemp < 30) {
             comment.textContent = 'Hom nay troi mat me';
         } else {
             comment.textContent = 'Hom nay troi nong';
         }
         let iconId = data.weather[0].icon;
-        let icon = document.querySelector('img');
         for (i = 0; i < myIcon.length; i++) {
             if (myIcon[i].id == iconId) {
                 icon.src = myIcon[i].src;

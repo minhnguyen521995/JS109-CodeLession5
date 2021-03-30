@@ -5,27 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <title>Weather Forecast</title>
 </head>
 
 <body>
-    <h1 style="color:red;margin: 100px; border: 10px solid red; background-color: yellow;">Chào mừng đến với Porfolio
-        của tôi</h1>
-    <h2 style="color: crimson;">Tên tôi là:</h2>
-    <p>Nguyễn Hoàng Minh</p>
-    <h2 style="color: crimson;">Đang làm việc ở</h2>
-    <p>Panasonic R&D Center Việt Nam</p>
-    <img src="https://www.frontierconsul.net/wordpress/wp-content/uploads/2018/05/fe1539e72473ce56b90746a4cbee70c3.jpg"
-        alt="">
-    <h2 style="color: crimson;">Sở thích</h2>
-    <p>Nghe nhạc</p>
-    <div style="background-color: red;width:200px; height: 200px; margin-left: 200px;">a</div>
-    <div style="background-color: yellow; width: 200px; height: 200px;padding-right: 200px;">b</div>
-    <div style="background-color: blue; width: 200px; height: 200px; margin-left: 400px;margin-top: -200px;">c</div>
-    <div id="div1" class="special square">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est alias doloribus tempora pariatur rerum, eum ipsum? Illo, officiis natus voluptates perspiciatis consequuntur accusamus tenetur nesciunt adipisci placeat saepe rem! Sequi?</div>
-    <div id="div2" class="special redText square">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum veritatis saepe praesentium perferendis? Quis voluptates, animi voluptate harum ut architecto blanditiis tenetur delectus quidem fugit corporis reprehenderit quasi itaque soluta!</div>
-    <div id="div3" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta veritatis iure, quod natus culpa tenetur deleniti necessitatibus dolore accusamus iusto, quidem rerum dolorum aliquid. Cumque illum officia nulla molestiae consequuntur.</div>
+    <h1>DỰ BÁO THỜI TIẾT</h1>
+    <h2>Nhập tên thành phố bạn muốn tìm</h2>
+    <div class="content">
+        <form id="input" action="">
+            <input type="text" name="city" placeholder="City name">
+            <button type="submit">Submit</button>
+            <div class="container">
+                <h3>Weather</h3>
+                <div id="comment"></div>
+                <img src="" alt="">
+                <div id="temp"></div>
+                <div id="description"></div>
+                <div id="city"></div>
+            </div>
+        </form>
+    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
