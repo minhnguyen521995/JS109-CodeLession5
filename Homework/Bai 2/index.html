@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quản lý hàng hóa</title>
+</head>
+
+<body>
+    <h1>PHẦN MỀM QUẢN LÝ HÀNG HÓA</h1>
+    <div id="container">
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Houseware')">Đồ gia dụng</button>
+            <button class="tablinks" onclick="openCity(event, 'Clothes')">Quần áo</button>
+            <button class="tablinks" onclick="openCity(event, 'Food')">Đồ ăn</button>
+        </div>
+
+        <div id="Houseware" class="tabcontent">
+
+            <form id="add-goods-form1">
+                <input type="text" name="id" placeholder="ID">
+                <input type="text" name="name" placeholder="Tên hàng hóa">
+                <input type="number" name="price" placeholder="Giá">
+                <input type="text" name="manufacturer" placeholder="Nhà sản xuất">
+                <input type="date" name="dateImport" placeholder="Ngày nhập">
+                <input type="text" name="durable" placeholder="Độ bền">
+                <button type="submit">Nhập hàng</button>
+
+            </form>
+
+        </div>
+
+        <div id="Clothes" class="tabcontent">
+
+            <form id="add-goods-form2">
+                <input type="text" name="id" placeholder="ID">
+                <input type="text" name="name" placeholder="Tên hàng hóa">
+                <input type="number" name="price" placeholder="Giá">
+                <input type="text" name="manufacturer" placeholder="Nhà sản xuất">
+                <input type="date" name="dateImport" placeholder="Ngày nhập">
+                <input type="text" name="origin" placeholder="Xuất xứ">
+                <input type="text" name="material" placeholder="Chất liệu">
+                <button type="submit">Nhập hàng</button>
+
+            </form>
+
+
+        </div>
+
+        <div id="Food" class="tabcontent">
+
+            <form id="add-goods-form3">
+                <input type="text" name="id" placeholder="ID">
+                <input type="text" name="name" placeholder="Tên hàng hóa">
+                <input type="number" name="price" placeholder="Giá">
+                <input type="text" name="manufacturer" placeholder="Nhà sản xuất">
+                <input type="date" name="dateImport" placeholder="Ngày nhập">
+                <input type="text" name="taste" placeholder="Vị">
+                <button type="submit">Nhập hàng</button>
+
+            </form>
+
+        </div>
+
+        <ul id="goods-list"></ul>
+
+        <h2>Tổng doanh thu</h2>
+
+        <p>Ấn nút để in ra màn hình tổng số tiền hàng bán được.</p>
+
+        <button id="revenue">Ấn</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+    <script src="./js/module1.js" type="module"></script>
+    <script src="./js/module2.js" type="module"></script>
+    <script src="./js/module3.js" type="module"></script>
+    <script src="./js/module4.js" type="module"></script>
+    <script src="./js/app.js" type="module"></script>
+</body>
+
+</html>

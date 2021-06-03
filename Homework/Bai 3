@@ -1,0 +1,19 @@
+Web Component
+
+1. Khái niệm
+
+Web components là một tập các quy chuẩn công nghệ 
+dùng cho việc xây dựng các thành phần trang web được đóng gói (tách biệt với phần code còn lại của ứng dụng) và có thể tái sử dụng.
+Web components là các thành phần UI của 1 trang web được đóng gói lại để sử dụng cho nhiều project khác nhau, bất kể framework gì.
+
+2. Tại sao cần dùng Web Component
+
+Công nghệ web đã và đang phát triển mạnh mẽ, độ phức tạp do vậy ngày càng tăng cao.
+Điều này đem lại không ít đau đầu cho các nhà phát triển web, khi số lượng thành phần trong một trang web ngày càng phình to và yêu cầu thì ngày một cao.
+
+3.Công nghệ sử dụng trong WebComponent
+Về cơ bản web components sử dụng 3 công nghệ
+
+Custom Elements: là tập hợp các API của Javascript để cho phép tạo ra các thành phần web tuỳ chỉnh, chẳng hạn như thẻ <my-todos> ở ví dụ trên.
+Shadow DOM: là tập hợp các API của Javascript để gắn một cây DOM “shadow” vào một thành phần của DOM, cây DOM này được quản lý riêng biệt và render riêng với cây DOM chính, do vậy nó có thể được đóng gói lại để sử dụng cho các ứng dụng khác nhau.
+HTML templates: Dùng để tạo ra các template từ đó được render ra trang web. Khái niệm này tương đối giống với một số framework khác như angular hay react.js
